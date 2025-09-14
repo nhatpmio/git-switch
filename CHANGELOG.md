@@ -204,4 +204,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 MIT License - See LICENSE file for details.
 
 ## Support
-For issues and questions, please visit: https://github.com/nhatpm3124/git-switch/issues
+For issues and questions, please visit: https://github.com/nhatpmss/git-switch/issues
