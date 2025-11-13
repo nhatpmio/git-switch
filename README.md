@@ -1,146 +1,163 @@
-# Git Profile Manager v2.3
+# Git Profile Manager
 
-A powerful command-line tool for managing and switching between multiple GitHub accounts on your local machine with an elegant interface and advanced features.
+> A sophisticated command-line utility for seamless management and switching between multiple GitHub accounts with enterprise-grade features and cross-platform support.
 
-## What's New in v2.3
+## Version 2.3 Release Highlights
 
-- **Settings Menu** - Organized configuration options into a dedicated settings menu
-- **Update Checker** - Automatic version checking from GitHub repository
-- **Cleaner Interface** - Streamlined main menu with 4 core options
-- **Enhanced Navigation** - Settings submenu with intuitive back button navigation
-- **Integrated Tools** - Connection testing and URL updating within Settings
+**Architecture Enhancements**
+- Centralized settings management through dedicated configuration menu
+- Integrated automatic version validation against GitHub repository
+- Streamlined core interface with focused four-option navigation
+- Hierarchical menu structure with intuitive return-path navigation
+- Consolidated connection diagnostics and URL management within settings framework
 
-## Key Features
+## Core Capabilities
 
-- **Fast Profile Switching** - Seamlessly switch between multiple GitHub accounts
-- **Automatic SSH Key Management** - Generate and manage 4096-bit RSA SSH keys
-- **Cross-Platform Clipboard Integration** - Auto-copy SSH keys to clipboard
-- **GitHub Integration** - Automatically open GitHub SSH settings page
-- **Connection Testing** - Verify GitHub connectivity with troubleshooting guidance
-- **Repository URL Auto-Update** - Automatically update repository URLs when switching profiles
-- **User-Friendly Interface** - Clean, colorful menu system with intuitive navigation
-- **Input Validation** - Ensure data integrity with comprehensive validation
+**Profile Management**
+- Instantaneous context switching between multiple GitHub identities
+- Zero-configuration profile transitions with automatic credential rotation
+
+**Security Infrastructure**
+- Automated generation and lifecycle management of 4096-bit RSA keypairs
+- Intelligent SSH configuration with per-profile host isolation
+- Secure passphrase support with encrypted credential storage
+
+**Integration Layer**
+- Universal clipboard integration across all major operating systems
+- Direct GitHub SSH settings page invocation from command line
+- Real-time connectivity validation with diagnostic troubleshooting
+- Automatic repository URL transformation on profile switch
+
+**User Interface**
+- Terminal-native interface with ANSI color coding
+- Context-aware operation modes (repository vs system-wide)
+- Comprehensive input validation and error recovery
+- Progressive disclosure design for advanced features
 
 ## Installation
 
-### 🍺 Homebrew (Recommended for macOS/Linux)
+### Package Manager Installation
+
+#### Homebrew (macOS and Linux)
 
 ```bash
 brew tap nhatpmio/gitsw
 brew install gitsw
 ```
 
-**Usage after Homebrew installation:**
+**Available Commands Post-Installation**
 ```bash
-gitsw                   # Launch Git Profile Manager
-git-profile            # Alternative command name
-git-profile-update     # Update to latest version
+gitsw                   # Primary application launcher
+git-profile            # Alternative invocation method
+git-profile-update     # Version update utility
 ```
 
-### Quick Start (No Installation Required)
+### Zero-Installation Execution
 
-#### Linux / macOS
+#### Unix-Based Systems (Linux / macOS)
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/nhatpmio/git-switch/main/run_git_profiles.sh)
 ```
 
-#### Windows PowerShell
+#### Windows Environments
+
+**PowerShell**
 ```powershell
 iwr -useb https://raw.githubusercontent.com/nhatpmio/git-switch/main/run_git_profiles.ps1 | iex
 ```
 
-#### Windows Git Bash
+**Git Bash**
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/nhatpmio/git-switch/main/run_git_profiles.sh)
 ```
 
-## Usage
+## Deployment Strategies
 
-### Installation Methods Comparison
+### Comparative Analysis
 
-| Method | Advantages | Considerations |
-|--------|------------|----------------|
-| **Homebrew** | Easy installation, automatic updates, system integration | macOS/Linux only, requires Homebrew |
-| **Direct Run** | No installation required, automatic cleanup, always latest version | Requires internet connection for startup, slightly slower initial launch |
-| **Manual Install** | Full control, works offline after setup | Manual update process |
+| Deployment Method | Primary Benefits | Operational Considerations |
+|-------------------|------------------|----------------------------|
+| **Homebrew** | Automated dependency resolution, seamless updates, system PATH integration | Platform constraint (Unix-based only), Homebrew prerequisite |
+| **Direct Execution** | Zero system footprint, guaranteed latest version, automatic cleanup | Network dependency on each invocation, marginal startup latency |
+| **Manual Installation** | Complete operational autonomy, offline functionality post-setup | Manual update workflow required |
 
-### Permanent Installation Options
+### Persistent Installation Procedures
 
-#### Option 1: Homebrew (macOS/Linux)
+#### Method A: Homebrew Package Manager
 ```bash
 brew tap nhatpmio/gitsw
 brew install gitsw
 ```
 
-#### Option 2: Manual Installation Script
+#### Method B: Automated Installation Script
 ```bash
 curl -fsSL https://raw.githubusercontent.com/nhatpmio/git-switch/main/install.sh | bash
 ```
 
-**After installation, use these commands:**
-- `gitsw` or `git-profile` - Launch the application
-- `git-profile-update` - Update to the latest version
+**Post-Installation Command Reference**
+- `gitsw` or `git-profile` — Launch application
+- `git-profile-update` — Synchronize with latest release
 
-### Python Direct Execution
+### Direct Python Invocation
 ```bash
 python3 ~/.git-profile-manager/git_profiles.py
 ```
 
-## Platform Support
+## Platform Compatibility Matrix
 
-### Linux
-- Full feature support
-- ANSI color support
-- Clipboard integration (xclip/xsel/wl-copy)
-- Proper SSH key permissions
+### Linux Distributions
+- Complete feature set availability
+- Native ANSI terminal color support
+- Clipboard abstraction layer (xclip/xsel/wl-copy)
+- POSIX-compliant file permission enforcement
 
 ### macOS
-- Complete feature compatibility
-- Native clipboard integration (pbcopy)
-- Browser integration
-- SSH key permission management
+- Full feature parity with Linux
+- Native clipboard API integration (pbcopy)
+- System browser automation support
+- Unix permission model compatibility
 
-### Windows
-- **Windows 10+ PowerShell** - Full support
-- **Git Bash** - Complete functionality
-- **Command Prompt** - Basic support
-- ANSI color support (Windows 10+)
+### Windows Operating Systems
+- **Windows 10 and Later** — Comprehensive feature support
+- **Git Bash Environment** — Complete functionality
+- **Command Prompt** — Core feature subset
+- Windows Terminal ANSI color rendering (Windows 10+)
 - PowerShell clipboard integration
-- Native Windows path handling
+- Native Windows path resolution
 
-#### Windows Requirements
-- Windows 10 or later (recommended)
-- Python 3.6+
-- Git for Windows
-- OpenSSH Client (Windows 10+) or Git Bash
+#### Windows System Requirements
+- Windows 10 or newer (recommended for full feature set)
+- Python 3.6 or higher
+- Git for Windows installation
+- OpenSSH Client (Windows 10+) or Git Bash environment
 
-## Usage Guidelines
+## Operational Modes
 
-### Context-Aware Operation
+### Context-Sensitive Behavior
 
-**Within a Repository**
-Switch the Git user for the current project:
+**Repository-Scoped Operations**
+Execute within a Git repository to configure project-specific identity:
 ```bash
-cd my-project
-git-profile  # Switch profile and auto-update remote URL
+cd /path/to/project
+git-profile  # Activates profile and updates remote configuration
 ```
 
-**Outside a Repository**
-Manage profiles and SSH keys:
+**System-Wide Operations**
+Execute outside repository context for global profile management:
 ```bash
 cd ~
-git-profile  # Add new profiles, manage SSH keys
+git-profile  # Access profile creation and SSH key management
 ```
 
-### Automatic Features
+### Automated Workflow Features
 
-- **Repository URL Auto-Update**: When switching profiles within a Git repository, remote URLs are automatically updated
-- **Smart SSH Configuration**: Automatic Host configuration for each profile
-- **Connection Verification**: GitHub connectivity testing after setup
-- **Clipboard Integration**: Automatic SSH key copying for easy GitHub setup
-- **Cross-Platform Path Handling**: Automatic Windows/Unix path resolution
+- **Repository URL Synchronization** — Automatic remote URL rewriting on profile activation
+- **Intelligent SSH Configuration** — Dynamic Host entry generation per profile
+- **Connectivity Diagnostics** — Post-configuration GitHub connection validation
+- **Clipboard Automation** — Zero-touch SSH public key transfer for GitHub registration
+- **Universal Path Handling** — Transparent Windows/Unix path translation
 
-## Interface
+## Application Interface
 
 ```
    _______ _____ _______     ____  ____   ____  ______ _____ __    _____ _____
@@ -165,68 +182,68 @@ Choose an option:
 Enter your choice (0-4): 
 ```
 
-## System Requirements
+## System Prerequisites
 
-### Core Requirements
-- **Python 3.6+** (uses Python standard library only)
-- **Git**
-- **Internet connection** (for downloading and GitHub connectivity)
+### Essential Components
+- **Python Runtime** — Version 3.6 or later (standard library dependencies only)
+- **Git Version Control** — Any modern release
+- **Network Connectivity** — Required for initial download and GitHub API access
 
-### SSH Features
-- **ssh-keygen** (OpenSSH client)
-- **Linux**: Usually pre-installed
-- **macOS**: Built-in
-- **Windows**: OpenSSH Client or Git for Windows
+### SSH Infrastructure
+- **OpenSSH Client** — ssh-keygen utility required
+- **Linux** — Typically pre-installed with distribution
+- **macOS** — Included with operating system
+- **Windows** — Available via OpenSSH Client feature or Git for Windows
 
-### Clipboard Features
-- **Linux**: xclip, xsel, or wl-copy
-- **macOS**: pbcopy (built-in)
-- **Windows**: PowerShell or clip (built-in)
+### Clipboard Integration
+- **Linux** — xclip, xsel, or wl-copy (Wayland)
+- **macOS** — pbcopy (system native)
+- **Windows** — PowerShell or clip.exe (system native)
 
-## Improvements from v1.0
+## Evolution from Version 1.0
 
-### Code Quality
-- Eliminated code duplication (reduced from 3 files to 2)
-- Class-based architecture with comprehensive error handling
-- Type hints and consistent code style
-- Cross-platform compatibility layer
+### Engineering Improvements
+- Architectural consolidation (reduced from 3-file to 2-file structure)
+- Object-oriented design with comprehensive exception handling
+- Type annotation throughout codebase
+- Platform abstraction layer implementation
 
-### Security
-- SSH key passphrase support
-- Proper file permissions (Unix) and Windows compatibility
-- Input validation and secure subprocess calls
-- Secure temporary file handling
+### Security Enhancements
+- SSH key passphrase support with secure input
+- Platform-appropriate file permission enforcement
+- Input sanitization and validation framework
+- Secure subprocess invocation patterns
 
-### User Experience
-- Clean ASCII art interface with ANSI colors
-- Platform-specific troubleshooting guidance
-- Enhanced error messages with context
-- Progress indicators and confirmation prompts
+### User Experience Refinement
+- ANSI-enhanced terminal interface with ASCII typography
+- Platform-specific error messaging and troubleshooting
+- Contextual error reporting with actionable guidance
+- Visual progress indicators and confirmation workflows
 
-### Performance & Deployment
-- Faster startup time and efficient operations
-- No external dependencies (Python standard library only)
-- Direct run option without installation
-- Automatic cleanup and proper resource management
+### Performance and Distribution
+- Optimized startup sequence and runtime efficiency
+- Zero external dependencies (Python standard library only)
+- Stateless direct execution mode
+- Proper resource cleanup and garbage collection
 
-## Cross-Platform Compatibility
+## Cross-Platform Feature Matrix
 
-| Feature | Linux | macOS | Windows 10+ | Windows <10 |
-|---------|-------|-------|-------------|-------------|
-| Core functionality | ✓ | ✓ | ✓ | ✓ |
-| Homebrew installation | ✓ | ✓ | ✗ | ✗ |
-| ANSI colors | ✓ | ✓ | ✓ | ✗ |
-| Clipboard copy | ✓ | ✓ | ✓ | ✓ |
-| SSH key generation | ✓ | ✓ | ✓ | Limited |
-| Browser integration | ✓ | ✓ | ✓ | ✓ |
-| Direct run script | ✓ | ✓ | ✓ | Limited |
+| Capability | Linux | macOS | Windows 10+ | Windows Legacy |
+|------------|-------|-------|-------------|----------------|
+| Core Operations | Full | Full | Full | Full |
+| Homebrew Distribution | Supported | Supported | Not Available | Not Available |
+| ANSI Color Rendering | Native | Native | Native | Limited |
+| Clipboard Integration | Native | Native | Native | Basic |
+| SSH Key Generation | Full Support | Full Support | Full Support | Partial |
+| Browser Automation | Supported | Supported | Supported | Supported |
+| Direct Execution | Full | Full | Full | Limited |
 
-## License
+## Licensing
 
-MIT License - see LICENSE file for details.
+Released under MIT License. Refer to LICENSE file for complete terms.
 
 ---
 
-**Designed for developers managing multiple GitHub accounts**
+**Professional-grade tooling for developers managing multiple GitHub identities**
 
-**Copyright © NHATPMIO**
+**Copyright (c) NHATPMIO**
