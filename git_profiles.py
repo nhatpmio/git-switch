@@ -610,7 +610,7 @@ class GitProfileCLI:
             
             # Check GitHub releases API
             try:
-                with urllib.request.urlopen("https://api.github.com/repos/nhatpmss/git-switch/releases/latest") as response:
+                with urllib.request.urlopen("https://api.github.com/repos/nhatpmio/git-switch/releases/latest") as response:
                     data = json.loads(response.read().decode())
                     latest_version = data.get('tag_name', '').lstrip('v')
                     release_url = data.get('html_url', '')
@@ -630,12 +630,12 @@ class GitProfileCLI:
             except Exception as e:
                 print(f"{colors.YELLOW}Could not check GitHub releases: {e}{colors.ENDC}")
                 print(f"\n{colors.CYAN}You can manually check at:{colors.ENDC}")
-                print(f"{colors.BLUE}https://github.com/nhatpmss/git-switch/releases{colors.ENDC}")
+                print(f"{colors.BLUE}https://github.com/nhatpmio/git-switch/releases{colors.ENDC}")
                 
         except ImportError:
             print(f"{colors.YELLOW}Update check requires internet connection{colors.ENDC}")
             print(f"\n{colors.CYAN}Please check manually at:{colors.ENDC}")
-            print(f"{colors.BLUE}https://github.com/nhatpmss/git-switch/releases{colors.ENDC}")
+            print(f"{colors.BLUE}https://github.com/nhatpmio/git-switch/releases{colors.ENDC}")
     
     def _exit_program(self) -> bool:
         """Exit the program gracefully."""

@@ -5,7 +5,7 @@ This guide explains how to set up and maintain the Homebrew tap for Git Profile 
 ## 🍺 Quick Installation for Users
 
 ```bash
-brew tap nhatpmss/gitsw
+brew tap nhatpmio/gitsw
 brew install gitsw
 ```
 
@@ -42,7 +42,7 @@ This script will:
 
 2. Get the SHA256 hash of the release tarball:
    ```bash
-   curl -sL https://github.com/nhatpmss/git-switch/archive/refs/tags/v2.3.0.tar.gz | shasum -a 256
+   curl -sL https://github.com/nhatpmio/git-switch/archive/refs/tags/v2.3.0.tar.gz | shasum -a 256
    ```
 
 ### Step 3: Update the Formula
@@ -70,15 +70,15 @@ This script will:
 1. **Create a new release** on the main repository
 2. **Get the new SHA256**:
    ```bash
-   curl -sL https://github.com/nhatpmss/git-switch/archive/refs/tags/vX.Y.Z.tar.gz | shasum -a 256
+   curl -sL https://github.com/nhatpmio/git-switch/archive/refs/tags/vX.Y.Z.tar.gz | shasum -a 256
    ```
 
 3. **Update the formula**:
    ```ruby
    class Gitsw < Formula
      desc "Git Profile Manager - Switch between multiple GitHub accounts seamlessly"
-     homepage "https://github.com/nhatpmss/git-switch"
-     url "https://github.com/nhatpmss/git-switch/archive/refs/tags/vX.Y.Z.tar.gz"
+     homepage "https://github.com/nhatpmio/git-switch"
+     url "https://github.com/nhatpmio/git-switch/archive/refs/tags/vX.Y.Z.tar.gz"
      sha256 "NEW_SHA256_HERE"
      license "MIT"
      version "X.Y.Z"
@@ -178,7 +178,7 @@ brew install --verbose gitsw
 
 # Uninstall completely
 brew uninstall --force gitsw
-brew untap nhatpmss/gitsw
+brew untap nhatpmio/gitsw
 ```
 
 ## 🚀 Automation Ideas
@@ -191,7 +191,7 @@ Consider creating GitHub Actions workflows for:
 ## 📞 Support
 
 For issues with the Homebrew formula:
-1. Check the [main repository](https://github.com/nhatpmss/git-switch)
+1. Check the [main repository](https://github.com/nhatpmio/git-switch)
 2. Open an issue in the tap repository
 3. Verify you're using the latest formula version
 

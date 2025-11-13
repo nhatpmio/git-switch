@@ -70,7 +70,7 @@ check_homebrew() {
 install_gitsw() {
     print_info "Adding Git Profile Manager tap..."
     
-    if brew tap nhatpmss/gitsw; then
+    if brew tap nhatpmio/gitsw; then
         print_success "Tap added successfully"
     else
         print_error "Failed to add tap"
@@ -99,7 +99,7 @@ show_usage() {
     print_info "To get started, run: ${CYAN}gitsw${NC}"
     echo
     print_info "For help and documentation, visit:"
-    echo -e "  ${CYAN}https://github.com/nhatpmss/git-switch${NC}"
+    echo -e "  ${CYAN}https://github.com/nhatpmio/git-switch${NC}"
 }
 
 # Check if already installed

@@ -1,7 +1,7 @@
 class Gitsw < Formula
   desc "Git Profile Manager - Switch between multiple GitHub accounts seamlessly"
-  homepage "https://github.com/nhatpmss/git-switch"
-  url "https://github.com/nhatpmss/git-switch/archive/refs/tags/v2.3.0.tar.gz"
+  homepage "https://github.com/nhatpmio/git-switch"
+  url "https://github.com/nhatpmio/git-switch/archive/refs/tags/v2.3.0.tar.gz"
   sha256 "REPLACE_WITH_ACTUAL_SHA256"
   license "MIT"
   version "2.3.0"
@@ -58,7 +58,7 @@ class Gitsw < Formula
         Run 'gitsw' to start managing your Git profiles
       
       For more information, visit:
-        https://github.com/nhatpmss/git-switch
+        https://github.com/nhatpmio/git-switch
     EOS
   end
 end 

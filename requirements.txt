@@ -57,4 +57,4 @@
 # python3 git_profiles.py
 
 # For system-wide installation, use the install script:
-# curl -fsSL https://raw.githubusercontent.com/nhatpmss/git-switch/main/install.sh | bash 
+# curl -fsSL https://raw.githubusercontent.com/nhatpmio/git-switch/main/install.sh | bash 

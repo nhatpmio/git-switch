@@ -85,12 +85,12 @@ create_tap_repository() {
     cat > README.md << 'EOF'
 # Git Profile Manager Homebrew Tap
 
-This is a Homebrew tap for [Git Profile Manager](https://github.com/nhatpmss/git-switch).
+This is a Homebrew tap for [Git Profile Manager](https://github.com/nhatpmio/git-switch).
 
 ## Installation
 
 ```bash
-brew tap nhatpmss/gitsw
+brew tap nhatpmio/gitsw
 brew install gitsw
 ```
 
@@ -106,7 +106,7 @@ git-profile-update     # Update to latest version
 
 Git Profile Manager is a powerful command-line tool for managing and switching between multiple GitHub accounts seamlessly.
 
-For more information, visit the [main repository](https://github.com/nhatpmss/git-switch).
+For more information, visit the [main repository](https://github.com/nhatpmio/git-switch).
 EOF
 
     # Commit and push
@@ -127,7 +127,7 @@ update_formula_sha() {
     print_info "To complete the setup, you need to:"
     echo -e "  ${YELLOW}1. Create a release on GitHub (v2.3.0)${NC}"
     echo -e "  ${YELLOW}2. Get the SHA256 of the release tarball:${NC}"
-    echo -e "     ${CYAN}curl -sL https://github.com/nhatpmss/git-switch/archive/refs/tags/v2.3.0.tar.gz | shasum -a 256${NC}"
+    echo -e "     ${CYAN}curl -sL https://github.com/nhatpmio/git-switch/archive/refs/tags/v2.3.0.tar.gz | shasum -a 256${NC}"
     echo -e "  ${YELLOW}3. Update the sha256 in Formula/gitsw.rb${NC}"
     echo -e "  ${YELLOW}4. Commit and push the changes${NC}"
 }

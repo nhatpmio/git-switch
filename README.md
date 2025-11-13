@@ -26,7 +26,7 @@ A powerful command-line tool for managing and switching between multiple GitHub 
 ### 🍺 Homebrew (Recommended for macOS/Linux)
 
 ```bash
-brew tap nhatpmss/gitsw
+brew tap nhatpmio/gitsw
 brew install gitsw
 ```
 
@@ -41,17 +41,17 @@ git-profile-update     # Update to latest version
 
 #### Linux / macOS
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/nhatpmss/git-switch/main/run_git_profiles.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/nhatpmio/git-switch/main/run_git_profiles.sh)
 ```
 
 #### Windows PowerShell
 ```powershell
-iwr -useb https://raw.githubusercontent.com/nhatpmss/git-switch/main/run_git_profiles.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/nhatpmio/git-switch/main/run_git_profiles.ps1 | iex
 ```
 
 #### Windows Git Bash
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/nhatpmss/git-switch/main/run_git_profiles.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/nhatpmio/git-switch/main/run_git_profiles.sh)
 ```
 
 ## Usage
@@ -68,13 +68,13 @@ bash <(curl -fsSL https://raw.githubusercontent.com/nhatpmss/git-switch/main/run
 
 #### Option 1: Homebrew (macOS/Linux)
 ```bash
-brew tap nhatpmss/gitsw
+brew tap nhatpmio/gitsw
 brew install gitsw
 ```
 
 #### Option 2: Manual Installation Script
 ```bash
-curl -fsSL https://raw.githubusercontent.com/nhatpmss/git-switch/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/nhatpmio/git-switch/main/install.sh | bash
 ```
 
 **After installation, use these commands:**
@@ -229,4 +229,4 @@ MIT License - see LICENSE file for details.
 
 **Designed for developers managing multiple GitHub accounts**
 
-**Copyright © NHATPMSS**
+**Copyright © NHATPMIO**
